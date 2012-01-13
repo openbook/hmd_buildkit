@@ -1,3 +1,15 @@
+; This file describes the core project requirements for the HMD BuildKit 7.x. Several
+; patches against Drupal core and their associated issue numbers have been
+; included here for reference.
+;
+; Use this file to build a full distro including Drupal core (with patches) and
+; the HMD BuildKit install profile using the following command:
+;
+;     $ drush make distro.make [directory]
+ 
+api = 2
+core = 7.x
+
 projects[drupal][type] = core
 projects[drupal][version] = "7.10"
 

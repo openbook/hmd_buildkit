@@ -37,9 +37,10 @@ projects[backup_migrate][subdir] = contrib
 projects[tao][version] = 3.0-beta4
 projects[rubik][version] = 4.0-beta7
 
-projects[omega][version] = 3.0 
+projects[omega][version] = 3.0
+
 ; Add hmd_responsive theme - starter theme based on omega
-projects[hmd_buildkit][type] = profile
+projects[hmd_buildkit][type] = theme
 projects[hmd_buildkit][download][type] = git
 projects[hmd_buildkit][download][url] = git@github.com:openbook/hmd_responsive.git
 
