@@ -1,0 +1,42 @@
+HMD build kit 1.x for Drupal 7.x
+----------------------------
+
+Creates a base install profile for Drupal 7 using the Omega responsive design framework and some core context/feature modules for easy import/export of site functionality.  The following patches will be applied to Drupal on installation:
+
+http://drupal.org/node/911354
+Make system directories configurable to allow tests in profiles/[name]/modules to be run.
+
+http://drupal.org/node/903730
+Missing drupal_alter() for text formats and filters
+
+http://drupal.org/node/995156
+Use vocabulary machine name for permissions
+
+Using this build kit
+----------------------------
+
+drush make "https://raw.github.com/openbook/hmd_buildkit/master/distro.make" [directory]
+
+Extending this build kit
+----------------------------
+
+1. Create a new install profile with the following files/folder structure 
+
+/myinstallprofile/distro.make
+/myinstallprofile/myinstallprofile.info
+/myinstallprofile/myinstallprofile.make
+/myinstallprofile/myinstallprofile.install
+/myinstallprofile/myinstallprofile.profile
+
+2. copy the contents of hmd_buildkit/distro.make to your myinstallprofile/ditro.make
+3. in the new version of distro.make replace "hmd_buildkit" used for the install profile with the name of your install profile and update the git path
+4. in the myinstallprofile.make add the following line at the top of the file, this will fetch the base modules and themes used in hmd_buildkit
+
+; include the hmd_buildkit make file
+includes[] = https://raw.github.com/openbook/hmd_buildkit/master/hmd_buildkit.make
+
+5. update the file names and .info file with the correct name of your install profile
+6. run your make file using the command 
+
+drush make "[PATH TO RAW distro.make FILE IN YOUR GIT REPO]" [directory]
+
