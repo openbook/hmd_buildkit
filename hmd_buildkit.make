@@ -40,7 +40,6 @@ projects[rubik][version] = 4.0-beta7
 projects[omega][version] = 3.0
 
 ; Add hmd_responsive theme - starter theme based on omega
-projects[hmd_buildkit][type] = theme
-projects[hmd_buildkit][download][type] = git
-projects[hmd_buildkit][download][url] = git@github.com:openbook/hmd_responsive.git
-
+projects[hmd_responsive][type] = theme
+projects[hmd_responsive][download][type] = git
+projects[hmd_responsive][download][url] = git@github.com:openbook/hmd_responsive.git
