@@ -3,9 +3,9 @@
 /**
  * Implements hook_install().
  */
-function respondrupal_install() {
-  theme_enable(array('responsive', 'rubik'));
-  variable_set('theme_default', 'responsive');
+function hmd_buildkit_install() {
+  theme_enable(array('hmd_responsive', 'rubik'));
+  variable_set('theme_default', 'hmd_responsive');
   variable_set('admin_theme', 'rubik');
   
 }
